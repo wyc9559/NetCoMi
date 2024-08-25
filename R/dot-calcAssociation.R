@@ -115,7 +115,7 @@
     
     assoMat <- as.matrix(assoMat)
     
-    countMat <- .spiec.easi.norm(countMat)
+    countMat <- spiec.norm(countMat)
     
     colnames(assoMat) <- rownames(assoMat) <- colnames(countMat)
     diag(assoMat) <- 1
@@ -332,7 +332,7 @@ alrReferenceSelection <- function(mcirobiome_assay, threshold, num_selected) {
   res
 }
 
-.spiec.easi.norm <- function(data) {
+spiec.norm <- function(data) {
   # internal function to normalize a data matrix
   if (inherits(data, 'matrix')) {
     ## standard data pipeline
