@@ -115,6 +115,8 @@
     
     assoMat <- as.matrix(assoMat)
     
+    countMat <- .spiec.easi.norm(countMat)
+    
     colnames(assoMat) <- rownames(assoMat) <- colnames(countMat)
     diag(assoMat) <- 1
     
